@@ -1,8 +1,18 @@
 package com.mycompany.springapp.productapp.model;
 
-public class ProductModel {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity(name = "PRODUCT_TABLE")
+public class ProductModel implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "PRODUCT_ID")
     private long id;
+
+    @Column(name = "PRODUCT_DESCRIPTION")
     private String description;
+    @Column(name = "PRODUCT_PRICE")
     private double price;
 
     public long getId() {

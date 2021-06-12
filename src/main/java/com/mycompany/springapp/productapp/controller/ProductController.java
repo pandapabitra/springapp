@@ -18,13 +18,13 @@ public class ProductController {
     private ProductService ps;
 
     @GetMapping(value = "/products")
-    public ResponseEntity<List<ProductModel>> getAllProducts()
+    public ResponseEntity<Iterable<ProductModel>> getAllProducts()
     {
-        List<ProductModel> list = ps.getAllProducts();
+        Iterable<ProductModel> list = ps.getAllProducts();
 
         //ResponseEntity<List<ProductModel>> responseEntity = new ResponseEntity<>(displayAllProducts, HttpStatus.OK);
         //return responseEntity;
-        return (new ResponseEntity<List<ProductModel>>(list, HttpStatus.OK));
+        return (new ResponseEntity<Iterable<ProductModel>>(list, HttpStatus.OK));
     }
 
     @PostMapping(path = "/products", consumes = {"application/json"}, produces = {"application/json"})
@@ -59,6 +59,16 @@ public class ProductController {
                                                       @RequestBody ProductModel productModel)
     {
         ProductModel productModel1 = ps.updateProduct(id,productModel);
+        ResponseEntity<ProductModel> res = new ResponseEntity<ProductModel>(productModel1, HttpStatus.OK);
+
+        return res;
+    }
+
+    @PutMapping(value="/products/update/{id}")
+    public ResponseEntity<ProductModel> updateProduct1(@PathVariable("id") long id,
+                                                      @RequestBody ProductModel productModel)
+    {
+        ProductModel productModel1 = ps.updateProduct1(id,productModel);
         ResponseEntity<ProductModel> res = new ResponseEntity<ProductModel>(productModel1, HttpStatus.OK);
 
         return res;

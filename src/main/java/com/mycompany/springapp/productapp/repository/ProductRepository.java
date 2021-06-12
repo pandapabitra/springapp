@@ -85,6 +85,41 @@ public class ProductRepository {
         return pm;
     }
 
+    //logic for updating a product based on Product id with either Price or Description
+    public ProductModel updateProduct1(long id, ProductModel productModel)
+    {
+        ProductModel pm = null;
+        //logic for updating the product based on Product id
+        for(int i=0; i<this.productsList.size(); i++)
+        {
+            pm = this.productsList.get(i);
+            if(pm.getId() == id)
+            {
+                //if product is found then update the product
+                if(productModel.getPrice() == 0.0)
+                {
+                    //pm.setPrice(productModel.getPrice());
+                    pm.setDescription(productModel.getDescription());
+                    this.productsList.set(i,pm);
+                }
+                else if(productModel.getDescription() == null)
+                {
+                    pm.setPrice(productModel.getPrice());
+                    //pm.setDescription(productModel.getDescription());
+                    this.productsList.set(i,pm);
+                }
+                else
+                {
+                    pm.setPrice(productModel.getPrice());
+                    pm.setDescription(productModel.getDescription());
+                    this.productsList.set(i,pm);
+                }
+            }
+            break;
+        }
+        return pm;
+    }
+
     /**
      * method name: searchProductByDescription
      * method parameters: String
