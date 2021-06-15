@@ -3,6 +3,7 @@ package com.mycompany.springapp.productapp.controller;
 import com.mycompany.springapp.productapp.model.ProductModel;
 import com.mycompany.springapp.productapp.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,12 +15,20 @@ import java.util.List;
 @RequestMapping("/api")
 public class ProductController {
 
+    @Value("${myproperty}")
+    private String dummyField;
+
+    @Value("${spring.datasource.username}")
+    private String dbUser;
+
     @Autowired
     private ProductService ps;
 
     @GetMapping(value = "/products")
     public ResponseEntity<Iterable<ProductModel>> getAllProducts()
     {
+        System.out.println(dummyField);
+        System.out.println(dbUser);
         Iterable<ProductModel> list = ps.getAllProducts();
 
         //ResponseEntity<List<ProductModel>> responseEntity = new ResponseEntity<>(displayAllProducts, HttpStatus.OK);
@@ -68,7 +77,7 @@ public class ProductController {
     public ResponseEntity<ProductModel> updateProduct1(@PathVariable("id") long id,
                                                       @RequestBody ProductModel productModel)
     {
-        ProductModel productModel1 = ps.updateProduct1(id,productModel);
+        ProductModel productModel1 = ps.partialUpdateProduct(id,productModel);
         ResponseEntity<ProductModel> res = new ResponseEntity<ProductModel>(productModel1, HttpStatus.OK);
 
         return res;
