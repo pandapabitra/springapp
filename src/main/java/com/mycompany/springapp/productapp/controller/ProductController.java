@@ -74,7 +74,7 @@ public class ProductController {
     }
 
     @PutMapping(value="/products/update/{id}")
-    public ResponseEntity<ProductModel> updateProduct1(@PathVariable("id") long id,
+    public ResponseEntity<ProductModel> partialUpdateProduct(@PathVariable("id") long id,
                                                       @RequestBody ProductModel productModel)
     {
         ProductModel productModel1 = ps.partialUpdateProduct(id,productModel);
