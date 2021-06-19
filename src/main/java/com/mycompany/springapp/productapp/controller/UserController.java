@@ -1,5 +1,6 @@
 package com.mycompany.springapp.productapp.controller;
 
+import com.mycompany.springapp.productapp.exception.BusinessException;
 import com.mycompany.springapp.productapp.model.UserModel;
 import com.mycompany.springapp.productapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,10 +35,16 @@ public class UserController {
     }
 
     @PostMapping(path = "/users/register")
-    public ResponseEntity<UserModel> register(@RequestBody UserModel userModel)
-    {
+    public ResponseEntity<?> register(@RequestBody UserModel userModel) throws BusinessException {
+        ResponseEntity<?> res = null;//? means any datatype is allowed.
         userModel = us.register(userModel);
-        ResponseEntity<UserModel> res = new ResponseEntity<UserModel>(userModel, HttpStatus.CREATED);
+        /*try {
+            userModel = us.register(userModel);
+        } catch (BusinessException be) {
+            res = new ResponseEntity<>(be.getErrorCode()+" - "+be.getErrorMessage(), HttpStatus.CONFLICT);
+            return res;
+        }*/
+        res = new ResponseEntity<>(userModel, HttpStatus.CREATED);
         return res;
     }
 }
