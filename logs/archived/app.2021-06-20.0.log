@@ -1,0 +1,39 @@
+2021-06-20 20:58:50,434 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-06-20 20:58:50,438 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-06-20 20:58:50,439 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-06-20 20:58:52,149 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 7820 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-06-20 20:58:52,151 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-06-20 20:59:04,510 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 13.62 seconds (JVM running for 15.185)
+2021-06-20 21:06:10,643 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-06-20 21:06:10,648 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-06-20 21:16:46,587 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-06-20 21:16:46,592 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-06-20 21:16:46,592 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-06-20 21:16:48,214 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 14108 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-06-20 21:16:48,216 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-06-20 21:16:59,441 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 12.361 seconds (JVM running for 13.877)
+2021-06-20 21:42:40,435 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-06-20 21:42:40,441 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-06-20 21:42:40,441 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-06-20 21:42:42,195 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 14344 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-06-20 21:42:42,196 DEBUG com.mycompany.springapp.SpringappApplication [main] Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-06-20 21:42:42,200 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-06-20 21:42:55,489 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 14.539 seconds (JVM running for 16.366)
+2021-06-20 22:05:44,863 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-06-20 22:05:44,874 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-06-20 22:05:44,874 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-06-20 22:05:48,839 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 2440 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-06-20 22:05:48,841 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-06-20 22:06:19,756 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 33.434 seconds (JVM running for 37.252)
+2021-06-20 22:21:10,209 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-06-20 22:21:10,218 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-06-20 22:21:10,218 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-06-20 22:21:13,658 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 14912 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-06-20 22:21:13,659 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-06-20 22:21:45,842 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 34.752 seconds (JVM running for 37.884)
+2021-06-20 22:26:04,024 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-06-20 22:26:04,030 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-06-20 22:26:04,030 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-06-20 22:26:06,505 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 3580 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-06-20 22:26:06,506 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-06-20 22:26:33,999 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 29.264 seconds (JVM running for 32.7)
