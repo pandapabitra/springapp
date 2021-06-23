@@ -31,10 +31,19 @@ public class PostController {
     }
 
     @DeleteMapping("/posts/{id}")
-    public ResponseEntity<PostModel> deletePost(@PathVariable Long id)
+    public ResponseEntity<PostModel> deletePost(@PathVariable("id") Long id)
     {
         PostModel postModel = ps.deletePost(id);
         ResponseEntity<PostModel> res = new ResponseEntity<>(postModel, HttpStatus.NO_CONTENT);
+        return res;
+    }
+
+    @PutMapping("/posts/{id}")
+    public ResponseEntity<PostModel> updatePost(@PathVariable("id") Long id,
+                                                @RequestBody PostModel postModel)
+    {
+        PostModel postModel1 = ps.updatePost(id, postModel);
+        ResponseEntity<PostModel> res = new ResponseEntity<>(postModel1, HttpStatus.OK);
         return res;
     }
 }

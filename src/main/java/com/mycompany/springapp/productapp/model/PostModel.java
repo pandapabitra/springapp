@@ -1,11 +1,15 @@
 package com.mycompany.springapp.productapp.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity(name = "POST_TABLE")
+//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class PostModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,7 +26,7 @@ public class PostModel {
     @Column(name = "POSTED_AT")
     private Date postedAt = new Date();
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable(name = "post_tags", joinColumns = { @JoinColumn(name = "post_id")},
             inverseJoinColumns = { @JoinColumn(name = "tag_id")})
     private Set<TagModel> tags = new HashSet<>();

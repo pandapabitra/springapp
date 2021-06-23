@@ -41,4 +41,9 @@ public class PostService {
         }
         return postModel;
     }
+    public PostModel updatePost(Long id, PostModel postModel)
+    {
+        pr.findById(id);
+        return null;
+    }
 }

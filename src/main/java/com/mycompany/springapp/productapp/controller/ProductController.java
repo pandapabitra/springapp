@@ -2,6 +2,10 @@ package com.mycompany.springapp.productapp.controller;
 
 import com.mycompany.springapp.productapp.model.ProductModel;
 import com.mycompany.springapp.productapp.service.ProductService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -36,8 +40,16 @@ public class ProductController {
         return (new ResponseEntity<Iterable<ProductModel>>(list, HttpStatus.OK));
     }
 
+    @ApiOperation(value = "createProduct",
+            notes = "This method creates a new product")
     @PostMapping(path = "/products", consumes = {"application/json"}, produces = {"application/json"})
-    public ResponseEntity<ProductModel> createProduct(@RequestBody ProductModel productModel)
+    public ResponseEntity<ProductModel> createProduct(@ApiParam(
+            name = "product",
+            type = "ProductModel",
+            value = "product data",
+            example = "id and description and price",
+            required = true)
+            @RequestBody ProductModel productModel)
     {
         System.out.println("create product");
 
@@ -48,7 +60,7 @@ public class ProductController {
     }
 
     @DeleteMapping(value = "/products/{id}")
-    public ResponseEntity<?> deleteProduct(@PathVariable("id") long id)
+    public ResponseEntity<?> deleteProduct(@PathVariable(name = "id") long id)
     {
         ProductModel productModel = ps.deleteProduct(id);
         ResponseEntity<?> res = null;
