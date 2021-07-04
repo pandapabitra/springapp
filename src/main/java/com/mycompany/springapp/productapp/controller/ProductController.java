@@ -1,5 +1,6 @@
 package com.mycompany.springapp.productapp.controller;
 
+import com.mycompany.springapp.productapp.exception.BusinessException;
 import com.mycompany.springapp.productapp.model.ProductModel;
 import com.mycompany.springapp.productapp.service.ProductService;
 import io.swagger.annotations.ApiOperation;
@@ -49,8 +50,7 @@ public class ProductController {
             value = "product data",
             example = "id and description and price",
             required = true)
-            @RequestBody ProductModel productModel)
-    {
+            @RequestBody ProductModel productModel) throws BusinessException {
         System.out.println("create product");
 
         productModel = ps.createProduct(productModel);

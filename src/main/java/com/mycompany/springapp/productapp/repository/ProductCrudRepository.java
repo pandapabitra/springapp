@@ -7,10 +7,12 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface ProductCrudRepository extends CrudRepository<ProductModel, Long> {
 
     /*@Query("SELECT pm FROM ProductModel pm WHERE pm.categoryModel.id = :catId")
     List<ProductModel> getAllProductsForCategory(@Param("catId") Long catId);*/
+    Optional<ProductModel> findByDescription(String description);
 }

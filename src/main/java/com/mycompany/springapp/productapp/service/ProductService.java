@@ -1,5 +1,6 @@
 package com.mycompany.springapp.productapp.service;
 
+import com.mycompany.springapp.productapp.exception.BusinessException;
 import com.mycompany.springapp.productapp.model.CategoryModel;
 import com.mycompany.springapp.productapp.model.ProductModel;
 import com.mycompany.springapp.productapp.repository.CategoryRepository;
@@ -30,11 +31,29 @@ public class ProductService {
         return productModelList;
     }
 
+    /*
     public ProductModel createProduct(ProductModel productModel)
     {
         Optional<CategoryModel> optCategory = cr.findById(productModel.getCategoryModel().getCategoryId());
         productModel.setCategoryModel(optCategory.get());
         productModel = pcr.save(productModel);//pr.createProduct(productModel);
+        return productModel;
+    }
+    */
+
+    public ProductModel createProduct(ProductModel productModel) throws BusinessException {
+        Optional<ProductModel> optProductModel = pcr.findByDescription(productModel.getDescription());
+        if(optProductModel.isPresent())
+        {
+            BusinessException be = new BusinessException("CREATE_001","Product with this description already exists. Please try with another product description");
+            throw be;
+        }
+        else
+        {
+            Optional<CategoryModel> optCategory = cr.findById(productModel.getCategoryModel().getCategoryId());
+            productModel.setCategoryModel(optCategory.get());
+            productModel = pcr.save(productModel);//pr.createProduct(productModel);
+        }
         return productModel;
     }
 

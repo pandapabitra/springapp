@@ -1,6 +1,39 @@
-2021-06-23 20:32:36,985 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
-2021-06-23 20:32:37,107 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
-2021-06-23 20:32:37,107 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
-2021-06-23 20:32:42,881 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 8856 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
-2021-06-23 20:32:42,882 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
-2021-06-23 20:33:12,318 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 33.266 seconds (JVM running for 43.161)
+2021-07-04 11:41:50,431 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-07-04 11:41:50,447 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-07-04 11:41:50,447 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-07-04 11:41:53,735 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 2460 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-07-04 11:41:53,736 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-07-04 11:43:29,648 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-07-04 11:43:29,653 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-07-04 11:43:29,653 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-07-04 11:43:31,361 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 9384 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-07-04 11:43:31,364 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-07-04 11:43:46,009 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 15.887 seconds (JVM running for 18.079)
+2021-07-04 11:59:40,754 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-07-04 11:59:40,759 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-07-04 11:59:40,759 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-07-04 11:59:42,125 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 6316 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-07-04 11:59:42,125 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-07-04 11:59:52,114 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 10.965 seconds (JVM running for 12.323)
+2021-07-04 12:37:55,798 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-07-04 12:37:55,804 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-07-04 12:37:55,804 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-07-04 12:37:57,817 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 12760 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-07-04 12:37:57,818 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-07-04 12:38:12,979 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 16.541 seconds (JVM running for 18.862)
+2021-07-04 12:40:22,031 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-07-04 12:40:22,040 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-07-04 12:40:22,040 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-07-04 12:40:24,027 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 11528 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-07-04 12:40:24,028 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-07-04 12:42:16,371 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-07-04 12:42:16,388 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-07-04 12:42:16,388 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-07-04 12:42:18,350 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 13768 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-07-04 12:42:18,351 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-07-04 12:42:34,244 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 17.259 seconds (JVM running for 19.563)
+2021-07-04 13:00:14,979 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-07-04 13:00:14,983 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-07-04 13:00:14,983 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-07-04 13:00:16,456 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 13360 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-07-04 13:00:16,457 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
