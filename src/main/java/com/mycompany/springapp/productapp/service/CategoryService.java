@@ -66,7 +66,16 @@ public class CategoryService {
     }
     public List<CategoryModel> searchCategory(String name)
     {
-        List<CategoryModel> categoriesList= cr.findByCategoryName(name);
+        List<CategoryModel> categoriesList = null;
+        Optional<List<CategoryModel>> optCategoryList= cr.findByCategoryName(name);
+        if(optCategoryList.isPresent())
+        {
+            categoriesList = optCategoryList.get();
+        }
+        else
+        {
+            System.out.println("No matching category found");
+        }
         return categoriesList;
     }
 }

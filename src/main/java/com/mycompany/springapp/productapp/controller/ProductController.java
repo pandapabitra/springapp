@@ -102,7 +102,7 @@ public class ProductController {
             @RequestParam("toPrice") double toPrice)
     {
         List<ProductModel> productsList = ps.searchProduct(desc,fromPrice,toPrice);
-        ResponseEntity res = new ResponseEntity(productsList, HttpStatus.OK);
+        ResponseEntity<List<ProductModel>> res = new ResponseEntity<>(productsList, HttpStatus.OK);
 
         return res;
     }
@@ -111,7 +111,7 @@ public class ProductController {
     public ResponseEntity<List<ProductModel>> searchProductByDescription(@RequestParam("desc") String desc)
     {
         List<ProductModel> productsList = ps.searchProductByDescription(desc);
-        ResponseEntity res = new ResponseEntity(productsList, HttpStatus.OK);
+        ResponseEntity<List<ProductModel>> res = new ResponseEntity<>(productsList, HttpStatus.OK);
 
         return res;
     }

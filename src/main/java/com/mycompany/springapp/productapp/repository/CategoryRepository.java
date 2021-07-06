@@ -5,8 +5,9 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface CategoryRepository extends CrudRepository<CategoryModel, Long> {
-    List<CategoryModel> findByCategoryName(String categoryName);
+    Optional<List<CategoryModel>> findByCategoryName(String categoryName);
 }

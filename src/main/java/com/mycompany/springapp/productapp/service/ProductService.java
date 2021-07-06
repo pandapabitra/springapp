@@ -42,8 +42,8 @@ public class ProductService {
     */
 
     public ProductModel createProduct(ProductModel productModel) throws BusinessException {
-        Optional<ProductModel> optProductModel = pcr.findByDescription(productModel.getDescription());
-        if(optProductModel.isPresent())
+        Optional<List<ProductModel>> optProductModelList = pcr.findByDescription(productModel.getDescription());
+        if(optProductModelList.isPresent())
         {
             BusinessException be = new BusinessException("CREATE_001","Product with this description already exists. Please try with another product description");
             throw be;
@@ -132,24 +132,48 @@ public class ProductService {
         }
         return productModel1;
     }
-
+    /*
     public List<ProductModel> searchProductByDescription(String desc)
     {
         List<ProductModel> productsList = null;
         productsList = pr.searchProductByDescription(desc);
         return productsList;
     }
-
+    */
+    public List<ProductModel> searchProductByDescription(String desc)
+    {
+        List<ProductModel> productModelList = null;
+        Optional<List<ProductModel>> optProductModel = pcr.findByDescription(desc);
+        if(optProductModel.isPresent())
+        {
+            productModelList = optProductModel.get();
+        }
+        else
+        {
+            System.out.println("No matching product found");
+        }
+        return productModelList;
+    }
+    /*
     public List<ProductModel> searchProduct(String desc, double fromPrice, double toPrice)
     {
         List<ProductModel> productsList = null;
         productsList = pr.searchProduct(desc,fromPrice,toPrice);
         return productsList;
     }
-    public List<ProductModel> searchProduct1(String desc, double fromPrice, double toPrice)
+    */
+    public List<ProductModel> searchProduct(String desc, double fromPrice, double toPrice)
     {
-        Iterable<ProductModel> productModelList = pcr.findAll();
-
-        return null;
+        List<ProductModel> productModelList = null;
+        Optional<List<ProductModel>> optProductModel = pcr.findByDescriptionAndPriceBetween(desc, fromPrice, toPrice);
+        if(optProductModel.isPresent())
+        {
+            productModelList = optProductModel.get();
+        }
+        else
+        {
+            System.out.println("No matching product found");
+        }
+        return productModelList;
     }
 }

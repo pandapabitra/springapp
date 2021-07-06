@@ -13,6 +13,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @ExtendWith(MockitoExtension.class)
@@ -27,18 +29,16 @@ public class ProductServiceTest {
     private CategoryRepository categoryRepository;
 
     @Test
-    public void test_createProduct_ProductExists()
-    {
+    public void test_createProduct_productExists()
+        {
         ProductModel pm1 = new ProductModel();
         pm1.setPrice(1000.1);
         pm1.setDescription("Garments");
 
-        ProductModel pm2 = new ProductModel();
-        pm2.setId(1);
-        pm2.setPrice(1000.1);
-        pm2.setDescription("Garments");
+        List<ProductModel> productModelList = new ArrayList<>();
+        productModelList.add(pm1);
 
-        Mockito.when(productRepository.findByDescription(pm1.getDescription())).thenReturn(Optional.of(pm1));
+        Mockito.when(productRepository.findByDescription(pm1.getDescription())).thenReturn(Optional.of(productModelList));
         //Mockito.when(productRepository.save(pm1)).thenReturn(pm2);
 
         Assertions.assertThrows(BusinessException.class,
@@ -48,7 +48,7 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void test_createProduct_ProductDoesNotExists() throws BusinessException {
+    public void test_createProduct_productDoesNotExists() throws BusinessException {
         CategoryModel cm = new CategoryModel();
         cm.setCategoryId(1L);
 
@@ -68,5 +68,7 @@ public class ProductServiceTest {
         Mockito.when(productRepository.save(pm1)).thenReturn(pm2);
 
         ProductModel pm = productService.createProduct(pm1);
+
+        Assertions.assertEquals(pm2.getId(), pm.getId());
     }
 }
