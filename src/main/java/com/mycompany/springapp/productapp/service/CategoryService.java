@@ -42,7 +42,7 @@ public class CategoryService {
     }
     public CategoryModel updateCategory(Long id, CategoryModel categoryModel)
     {
-        CategoryModel categoryModel1 = null;;
+        CategoryModel categoryModel1 = null;
         Optional<CategoryModel> optCategoryModel = cr.findById(id);
         if(optCategoryModel.isPresent())
         {
