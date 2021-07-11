@@ -17,12 +17,12 @@ public class ScheduledTasks {
 
     @Scheduled(fixedRate = 2000)
     public void scheduleTaskWithFixedRate(){
-        logger.info("Fixed Rate Task :: Execution Time - {}", dateTimeFormatter.format(LocalDateTime.now()));
+        //logger.info("Fixed Rate Task :: Execution Time - {}", dateTimeFormatter.format(LocalDateTime.now()));
     }
 
     @Scheduled(fixedDelay = 2000)
     public void scheduleTaskWithFixedDelay(){
-        logger.info("Fixed Delay Task :: Execution Time - {}", dateTimeFormatter.format(LocalDateTime.now()));
+        //logger.info("Fixed Delay Task :: Execution Time - {}", dateTimeFormatter.format(LocalDateTime.now()));
         try {
             TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException ex) {
@@ -33,12 +33,12 @@ public class ScheduledTasks {
 
     @Scheduled(fixedRate = 2000, initialDelay = 5000)
     public void scheduleTaskWithInitialDelay(){
-        logger.info("Fixed Rate Task with Initial Delay :: Execution Time - {}", dateTimeFormatter.format(LocalDateTime.now()));
+        //logger.info("Fixed Rate Task with Initial Delay :: Execution Time - {}", dateTimeFormatter.format(LocalDateTime.now()));
     }
 
     @Scheduled(cron = "0 * * * * ?")//every 1 min
     public void scheduleTaskWithCronExpression(){
-        logger.info("Cron Task :: Execution Time - {}", dateTimeFormatter.format(LocalDateTime.now()));
+        //logger.info("Cron Task :: Execution Time - {}", dateTimeFormatter.format(LocalDateTime.now()));
     }
 
 }
