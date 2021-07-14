@@ -1,12 +1,6 @@
-2021-07-11 12:11:51,345 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
-2021-07-11 12:11:51,359 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
-2021-07-11 12:11:51,360 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
-2021-07-11 12:11:52,811 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 16280 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
-2021-07-11 12:11:52,812 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
-2021-07-11 12:12:05,993 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 14.163 seconds (JVM running for 15.59)
-2021-07-11 12:17:29,211 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
-2021-07-11 12:17:29,215 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
-2021-07-11 12:17:29,215 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
-2021-07-11 12:17:30,793 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 15568 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
-2021-07-11 12:17:30,794 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
-2021-07-11 12:17:41,637 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 11.946 seconds (JVM running for 13.364)
+2021-07-14 02:42:25,744 INFO com.mycompany.springapp.SpringappApplication [main] hello world info
+2021-07-14 02:42:25,767 WARN com.mycompany.springapp.SpringappApplication [main] hello world warn
+2021-07-14 02:42:25,767 ERROR com.mycompany.springapp.SpringappApplication [main] hello world error
+2021-07-14 02:42:28,323 INFO com.mycompany.springapp.SpringappApplication [main] Starting SpringappApplication using Java 1.8.0_281 on Pabitra with PID 5172 (D:\Java_Learning\springapp\target\classes started by Pabitra in D:\Java_Learning\springapp)
+2021-07-14 02:42:28,324 INFO com.mycompany.springapp.SpringappApplication [main] The following profiles are active: dev
+2021-07-14 02:42:45,118 INFO com.mycompany.springapp.SpringappApplication [main] Started SpringappApplication in 18.637 seconds (JVM running for 20.897)

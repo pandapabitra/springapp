@@ -95,7 +95,7 @@ public class ProductServiceTest {
         Mockito.when(productRepository.findByDescription(pm1.getDescription())).thenReturn(Optional.empty());
         Mockito.when(categoryRepository.findById(pm1.getCategoryModel().getCategoryId())).thenReturn(Optional.of(cm2));
         Mockito.when(productRepository.save(pm1)).thenReturn(pm2);
-
+        //Assertions.assertEquals(pm1.getCategoryModel().getCategoryName(), pm2.getCategoryModel().getCategoryName());
         ProductModel pm = productService.createProduct(pm1);
 
         Assertions.assertEquals(pm2.getId(), pm.getId());

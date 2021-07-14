@@ -4,6 +4,7 @@ import com.mycompany.springapp.productapp.model.CommentModelNew;
 import com.mycompany.springapp.productapp.model.PostModelNew;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -18,6 +19,7 @@ public class PostServiceImpl implements PostServiceNew {
     private RestTemplate restTemplate;
 
     @Override
+    //@Cacheable
     public PostModelNew[] getAllPosts(){
         PostModelNew[] result = restTemplate.getForObject(postApiBaseUrl+"/posts", PostModelNew[].class);
         System.out.println(result);
@@ -34,6 +36,7 @@ public class PostServiceImpl implements PostServiceNew {
     }
     */
     @Override
+    @Cacheable(cacheNames = "allCommentsCache", key = "#postId")
     public CommentModelNew[] getAllCommentsForAPost(Long postId) {
         CommentModelNew[] result = restTemplate.getForObject(postApiBaseUrl+"/posts/"+postId+"/comments", CommentModelNew[].class);
         //https://jsonplaceholder.typicode.com/posts/1/comments
