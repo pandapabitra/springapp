@@ -12,7 +12,6 @@ public class BusinessExceptionHandler {
     @ExceptionHandler(BusinessException.class)
     public ResponseEntity<String> handleBusinessException (BusinessException be, WebRequest req)
     {
-        ResponseEntity<String> res = new ResponseEntity<>(be.getErrorCode()+" - "+be.getErrorMessage(), HttpStatus.CONFLICT);
-        return res;
+        return new ResponseEntity<>(be.getErrorCode()+" - "+be.getErrorMessage(), HttpStatus.CONFLICT);
     }
 }

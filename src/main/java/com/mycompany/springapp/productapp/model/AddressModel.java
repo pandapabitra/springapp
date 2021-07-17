@@ -1,7 +1,6 @@
 package com.mycompany.springapp.productapp.model;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity(name = "ADDRESS")
 public class AddressModel {

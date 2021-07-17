@@ -1,13 +1,8 @@
 package com.mycompany.springapp.productapp.exception;
 
 public class BusinessException extends Exception {
-    private String errorCode;
-    private String errorMessage;
-
-    public BusinessException()
-    {
-        super();
-    }
+    private final String errorCode;
+    private final String errorMessage;
 
     public BusinessException(String errorCode, String errorMessage)
     {
